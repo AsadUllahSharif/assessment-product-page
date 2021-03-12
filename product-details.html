@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <title>Product Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="product-details.css">
+  <script type="text/javascript" src="js/product-details.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+</head>
+<html>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="product-detail-steps step01">
+      <span class="action"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+      <h1>Basics</h1>
+      <span class="action right"><i class="fa fa-times" aria-hidden="true"></i></span>
+    </div>
+  </header>
+  <!-- End of Header -->
+
+  <div class="sub-header container">
+    <span>Step 1 of 3</span>
+    <button class="btn-white" onclick="showPreview()"><i class="fa fa-eye" aria-hidden="true"></i> Preview ad</button>
+  </div>
+
+
+  <!-- Content Section -->
+  <section class="container" id="contact">
+    <p class="ads-message">Placing your ads in <a href="javascript void(0);">Laptop Computer</a></p>
+    <form class="form-wrapper form-style01 ">
+      <fieldset id="step01">
+        <div class="field-row">
+          <label for="fname">Title<span>Descriptive titles generates more interest <i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+          <input type="text" id="prouctTitle" maxlength="14" placeholder="Eg iPhone Pro Max 2016"
+            onkeyup="replaceMessage(this.value, 'product-name');" value="">
+        </div>
+        <div class="field-row">
+          <label for="fname">Price<span>Suitable prices attracts more buyers <i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+          <input type="number" id="prouctPrice" maxlength="14" placeholder="Selling Prive in ADE"
+            onkeyup="replaceMessage(this.value, 'product-price');" value="">
+        </div>
+        <div class="field-row">
+          <label for="fname">Photos<span>High Quality photos help you sell faster <i class="fa fa-info-circle" aria-hidden="true"></i></span></label>
+
+          <div class="upload-options">
+            <label>
+              <i class="fa fa-file-image-o" aria-hidden="true"></i>
+              Upload Photos
+
+              <input type="file" onchange="loadFile(event)" class="image-upload" accept="image/*" />
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset id="step2"></fieldset>
+      <fieldset id="step3"></fieldset>
+    </form>
+  </section>
+   <!-- End of Content Section -->
+
+  <!-- Product preview -->
+  <section id="preview-holder" class="product-preview">
+
+    <header class="style01">
+      <span onclick="hidePreview()" class="action"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+      <h1>Laptop computer <span>In computers & Networking</span></h1>
+    </header>
+
+    <div class="container style01">
+      <div class="product-card">
+        <img class="product-img" id="output" src="images/product-sample.png" alt="your image" />
+        <div class="product-details">
+          <div class="inside-prod-details">
+            <p id="product-name" class="product-title">MacBook Air 2014</p>
+            <p class="product-date">Posted Just Now</p>
+          </div>
+          <p class="product-price">AED <span id="product-price">2000</span></p>
+        </div>
+      </div>
+
+      <h2 class="sub-heading">Condition</h2>
+      <p>New</p>
+
+      <h2 class="sub-heading">Description</h2>
+      <p>speed and responsiveness. The M1 chil and macOS Big sur work togather to make the entire system.</p>
+
+      <div class="location-card">
+        <div class="left-location">
+          <h2 class="sub-heading">Item Location</h2>
+          <address>DownTown Dubai <span>Neighborhood</span></address>
+        </div>
+        <div class="right-location">
+          <img src="images/item-location.png" alt="" />
+        </div>
+      </div>
+
+    </div>
+
+    <button onclick="hidePreview()" class="btn-block">Close Preview</button>
+
+  </section>
+
+  <!-- End page content -->
+  </div>
+
+</body>
+
+</html>
